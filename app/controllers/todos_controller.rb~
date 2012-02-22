@@ -11,6 +11,12 @@ class TodosController < ApplicationController
   def create
     @todo = Todo.new(params[:todo])
     @todo.save!
+    redirect_to todos_url
+  end
+
+  def update
+    @todo = Todo.find(params[:id])
+    @todo.update_attributes(params[:todo])
   end
 
 end

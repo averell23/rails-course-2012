@@ -7,7 +7,6 @@
 <%  @todos.each do |todo| %>
   <li>
     <%= todo.description %>
-    <%= todo.done ? "Done" : "Not done" %> 
     <%= form_for todo  do |f| %>
       <%= f.submit "Done" %>
       <%= f.hidden_field :done, :value => true %>
