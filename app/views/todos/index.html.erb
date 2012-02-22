@@ -3,11 +3,11 @@
 # and open the template in the editor.
 %>
 
-<ul>
+<ul id="todo-list">
 <%  @todos.each do |todo| %>
   <li>
     <%= todo.description %>
-    <%= todo.done ? "Done" : "Not done" %> 
+    <span class="<%= todo.done ? "done" : "not-done" %>"><%= todo.done ? "Done" : "Not done" %></span> 
     <%= form_for todo  do |f| %>
       <%= f.submit "Done" %>
       <%= f.hidden_field :done, :value => true %>
