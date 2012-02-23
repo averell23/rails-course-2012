@@ -6,7 +6,7 @@ gem 'rails', '3.2.1'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 # gem 'jdbc-sqlite3'
-gem 'activerecord-jdbcsqlite3-adapter'
+# gem 'activerecord-jdbcsqlite3-adapter'
 gem 'pg'
 
 gem 'json'
