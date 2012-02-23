@@ -3,7 +3,7 @@
 # and open the template in the editor.
 %>
 
-<%= link_to "Home", todos_path %>
+<%= link_to "Home", user_todos_url(@user) %>
 <% if flash[:errors].present? %>
 	<div style="width: 100%; background-color: red; padding: 10px; margin: 20px;">
 	  <%= flash[:errors] %>
