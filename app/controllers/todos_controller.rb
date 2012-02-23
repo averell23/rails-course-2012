@@ -5,13 +5,16 @@ class TodosController < ApplicationController
   end
 
   def new
-    @todo = Todo.new(:description => "New Todo Item")
+    @todo = Todo.new
   end
 
   def create
     @todo = Todo.new(params[:todo])
-    @todo.save!
-    redirect_to todos_url
+    if(@todo.save)
+      redirect_to todos_url
+    else
+      render :new
+    end
   end
 
   def update
