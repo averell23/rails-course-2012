@@ -11,3 +11,14 @@
  *= require_self
  *= require_tree .
 */
+
+body{
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    background-color: #FDFDFF;
+    padding:0 10px;
+}
+h1{
+    font-size:1.8em;
+    color:#333;
+}

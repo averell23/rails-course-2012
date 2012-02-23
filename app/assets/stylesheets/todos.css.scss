@@ -1,3 +1,18 @@
 // Place all the styles related to the todos controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#todo-list form{
+    display:inline;
+}
+span.not-done, span.done{
+    background: #B94A48;
+    border-radius: 3px 3px 3px 3px;
+    color: #FFFFFF;
+    font-weight: bold;
+    padding: 2px 4px 3px;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+span.done{
+    background-color:#468847;
+}
