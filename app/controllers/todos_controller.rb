@@ -21,9 +21,9 @@ class TodosController < ApplicationController
 
   # POST /todos/
   def create
-    @todo = Todo.new(params[:todo])
+    @todo = @user.todos.build(params[:todo])
     if(@todo.save)
-      redirect_to todos_url
+      redirect_to user_todos_url(@user)
     else
       flash[:errors] = "Ooooooh something is wrong with this"
       render :new
@@ -33,7 +33,7 @@ class TodosController < ApplicationController
   # PUT /todos/:id
   def update
     @todo.update_attributes(params[:todo])
-    redirect_to todos_url
+    redirect_to user_todos_url(@user)
   end
 
   protected
