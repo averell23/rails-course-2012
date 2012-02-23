@@ -6,6 +6,10 @@ class TodosController < ApplicationController
     @todos = Todo.not_done
   end
 
+  
+  def show
+  end
+
   def new
     @todo = Todo.new
   end

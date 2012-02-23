@@ -3,16 +3,8 @@
 # and open the template in the editor.
 %>
 
-<ul>
-<%  @todos.each do |todo| %>
-  <li>
-    <%= todo.description %>
-    <%= form_for todo  do |f| %>
-      <%= f.submit "Done" %>
-      <%= f.hidden_field :done, :value => true %>
-    <% end %>
-  </li>
-<% end  %>
+<ul id="todo-list">
+<%= render @todos %>
 </ul>
 
 <%= link_to "New Todo", new_todo_path %>

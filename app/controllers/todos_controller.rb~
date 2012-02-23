@@ -1,6 +1,6 @@
 class TodosController < ApplicationController
 
-  rescue_from ActiveRecord::RecordInvalid, :with => :sos
+  # rescue_from ActiveRecord::RecordInvalid, :with => :sos
 
   def index
     @todos = Todo.not_done

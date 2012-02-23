@@ -4,16 +4,7 @@
 %>
 
 <ul id="todo-list">
-<%  @todos.each do |todo| %>
-  <li>
-    <%= todo.description %>
-    <span class="<%= todo.done ? "done" : "not-done" %>"><%= todo.done ? "Done" : "Not done" %></span> 
-    <%= form_for todo  do |f| %>
-      <%= f.submit "Done" %>
-      <%= f.hidden_field :done, :value => true %>
-    <% end %>
-  </li>
-<% end  %>
+<%= render @todos %>
 </ul>
 
 <%= link_to "New Todo", new_todo_path %>
