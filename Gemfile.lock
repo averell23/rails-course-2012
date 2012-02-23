@@ -113,7 +113,6 @@ PLATFORMS
 DEPENDENCIES
   activerecord-jdbcsqlite3-adapter
   coffee-rails (~> 3.2.1)
-  jdbc-sqlite3
   jquery-rails
   json
   pg
