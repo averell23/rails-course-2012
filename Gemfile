@@ -7,6 +7,7 @@ gem 'rails', '3.2.1'
 
 gem 'jdbc-sqlite3'
 gem 'activerecord-jdbcsqlite3-adapter'
+gem 'pg'
 
 gem 'json'
 
