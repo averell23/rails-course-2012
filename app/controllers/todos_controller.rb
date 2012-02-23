@@ -3,10 +3,11 @@ class TodosController < ApplicationController
   # rescue_from ActiveRecord::RecordInvalid, :with => :sos
 
   before_filter :find_todo, :only => [:show, :update]
+  before_filter :find_user
 
   # GET /todos/
   def index
-    @todos = Todo.not_done
+    @todos = @user.todos.not_done
   end
 
   # GET /todos/:id
@@ -39,6 +40,10 @@ class TodosController < ApplicationController
 
   def find_todo
     @todo = Todo.find(params[:id])
+  end
+
+  def find_user
+    @user = User.find(params[:user_id])
   end
 
   def sos

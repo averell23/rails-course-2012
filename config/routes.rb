@@ -2,8 +2,9 @@ MyNewAppByHand::Application.routes.draw do
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
-  resources :todos
-  resources :users
+  resources :users do
+    resources :todos
+  end
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
