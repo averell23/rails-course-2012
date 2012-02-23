@@ -16,7 +16,7 @@ class TodosController < ApplicationController
 
   # GET /todos/new
   def new
-    @todo = Todo.new
+    @todo = @user.todos.build
   end
 
   # POST /todos/
