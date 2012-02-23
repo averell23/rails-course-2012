@@ -22,3 +22,7 @@ h1{
     font-size:1.8em;
     color:#333;
 }
+
+td{
+  padding: 10px;
+}

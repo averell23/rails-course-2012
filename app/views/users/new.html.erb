@@ -1,0 +1,9 @@
+<%= form_for @user do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= @user.errors.get(:name).join(', ') %>
+  <%= f.label :email %>
+  <%= f.text_field :email %>
+  <%= @user.errors.get(:email).join(', ') %>
+  <%= f.submit %>
+<% end %>
