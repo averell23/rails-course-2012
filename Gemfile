@@ -5,10 +5,6 @@ gem 'rails', '3.2.1'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-# gem 'jdbc-sqlite3'
-# gem 'activerecord-jdbcsqlite3-adapter'
-gem 'pg'
-
 gem 'json'
 
 # Gems used only for assets and not required
@@ -21,6 +17,15 @@ group :assets do
   gem 'therubyrhino'
 
   gem 'uglifier', '>= 1.0.3'
+end
+
+group :production do
+	gem 'pg'
+end
+
+group :development do
+	gem 'jdbc-sqlite3'
+	gem 'activerecord-jdbcsqlite3-adapter'
 end
 
 gem 'jquery-rails'
