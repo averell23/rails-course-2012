@@ -22,11 +22,14 @@ class TodosController < ApplicationController
   # POST /todos/
   def create
     @todo = @user.todos.build(params[:todo])
-    if(@todo.save)
-      redirect_to user_todos_url(@user)
-    else
-      flash[:errors] = "Ooooooh something is wrong with this"
-      render :new
+    respond_to do |format|    
+	    if(@todo.save)
+	      format.html { redirect_to user_todos_url(@user) }
+	      format.js
+	    else
+	      flash[:errors] = "Ooooooh something is wrong with this"
+	      render :new
+	    end
     end
   end
 
