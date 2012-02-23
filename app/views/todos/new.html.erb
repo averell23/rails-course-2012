@@ -3,9 +3,17 @@
 # and open the template in the editor.
 %>
 
+<%= link_to "Home", todos_path %>
+<% if flash[:errors].present? %>
+	<div style="width: 100%; background-color: red; padding: 10px; margin: 20px;">
+	  <%= flash[:errors] %>
+	</div>
+<% end %>
+
 <%=form_for @todo do |f| %>
 	
     <%= f.text_field :description %>
+    <%= @todo.errors.get(:description).join(', ') %>
     <%= f.submit %>
 
 <% end %>
