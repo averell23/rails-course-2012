@@ -1,0 +1,8 @@
+<li>
+    <%= todo.description %>
+    <span class="<%= todo.done ? "done" : "not-done" %>"><%= todo.done ? "Done" : "Not done" %></span> 
+    <%= form_for todo  do |f| %>
+      <%= f.submit "Done" %>
+      <%= f.hidden_field :done, :value => true %>
+    <% end %>
+ </li>
