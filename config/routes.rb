@@ -4,8 +4,9 @@ MyNewAppByHand::Application.routes.draw do
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
-  resources :todos
-  resources :users
+  resources :users do
+    resources :todos
+  end
 
   root :to => "users#index"
 

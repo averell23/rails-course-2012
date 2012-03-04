@@ -7,4 +7,9 @@
 <%= render @todos %>
 </ul>
 
-<%= link_to "New Todo", new_todo_path %>
+<%= form_for [@user, Todo.new], :remote => true do |f| %>
+  <%= f.text_field :description %>
+  <%= f.submit "Add" %>
+<% end %>
+
+<%= link_to "New Todo", new_user_todo_path(@user) %>
