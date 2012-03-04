@@ -3,6 +3,7 @@ class TodosController < ApplicationController
   # rescue_from ActiveRecord::RecordInvalid, :with => :sos
 
   before_filter :find_todo, :only => [:show, :update]
+  before_filter :authenticate_user!
 
   # GET /todos/
   def index

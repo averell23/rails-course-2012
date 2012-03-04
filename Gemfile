@@ -6,6 +6,7 @@ gem 'rails', '3.2.1'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'json'
+gem 'devise'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -24,8 +25,9 @@ group :production do
 end
 
 group :development do
-	gem 'jdbc-sqlite3'
-	gem 'activerecord-jdbcsqlite3-adapter'
+	# gem 'jdbc-sqlite3'
+	gem "sqlite3"
+	# gem 'activerecord-jdbcsqlite3-adapter'
 end
 
 gem 'jquery-rails'
